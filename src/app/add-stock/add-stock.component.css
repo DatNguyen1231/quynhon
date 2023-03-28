@@ -1,0 +1,84 @@
+.all {
+  
+  display: flex;
+  width: 700px;
+  height: 500px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.test {
+  background: #f2f2f2;
+  border-radius: 8px;
+  box-shadow: 0 4px 4px rgba(0,0,0,.25);
+  margin-bottom: 20px;
+  padding: 10px;
+  width: calc(33.33% - 10px);
+}
+
+.test .name {
+  font-weight: bold;
+  margin-bottom: 5px;
+  
+}
+
+.test .gia {
+  font-size: 18px;
+}
+
+.add {
+  background: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px 10px;
+  transition: all .3s ease;
+}
+
+.add:hover {
+  background: #3e8e41;
+}
+
+form {
+  background: #f2f2f2;
+  border-radius: 8px;
+  box-shadow: 0 4px 4px rgba(0,0,0,.25);
+  margin-top: 20px;
+  padding: 20px;
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"] {
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+}
+
+button[type="submit"] {
+  background: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px;
+  transition: all .3s ease;
+}
+
+button[type="submit"]:hover {
+  background: #3e8e41;
+}

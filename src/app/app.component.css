@@ -1,0 +1,13 @@
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    float: left;
+    width: 100%;
+}
+
+.title {
+    color: #fff;
+    background-color: blue;
+    font-size: 16px;
+}

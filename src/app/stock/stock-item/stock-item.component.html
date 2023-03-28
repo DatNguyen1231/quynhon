@@ -1,0 +1,42 @@
+<div class="container">
+    <div *ngFor="let item of comt.dataStock; let i=index" [ngClass]="item.positive ? 'increase':'decrease'" class="stock-container">
+      <div class="name">{{item.name}}</div>
+      
+      <div class="price">$ {{item.price}}</div>
+      <div *ngIf="item.positive" class="priceChange green">
+          <i class="fas fa-caret-up"></i>{{'$' + item.priceChange + '(' + item.changePercent() + '%' + ')'}}
+      </div>
+      <div *ngIf="!item.positive" class="priceChange red">
+          <i class="fas fa-caret-down"></i>{{'-' + '$' + item.priceChange + '(' + '-' + item.changePercent() + '%' + ')'}}
+      </div>
+      <button  (click)=" toggleFavorite(i)" [disabled]="item.favorite">Add to Favorite</button>
+    </div>
+
+    
+    <div class="favorite-stocks">
+      <h3>Your Favorites</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Price</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of comt.dataStock; let i = index   ">
+            <span   *ngIf="comt.dataStock[i].love==true">
+              <td>{{ item.name}}</td>
+              <td class="green">{{ item.changePercent()}}</td>
+              <td><button  (click)="xoa(i)"> delete<i class="far fa-trash-alt"></i></button ></td>
+
+            </span>
+              
+           
+           
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

@@ -1,0 +1,41 @@
+  
+
+<div class="all">
+  <div *ngFor="let item of tam;let i=index" class="test">
+    
+    <div class="name" >{{item.name}}</div>
+    <div class="gia"> ${{item.price}}</div>
+    <button (click)="addToFavorte(i)" class="add">Add To Favorite</button>
+</div>
+
+<!-- <div *ngFor="let item of comt.dataStock;let i=index" class="test">
+    
+  <div class="name" >{{item.name}} ({{item.code}})</div>
+  <div class="gia"> ${{item.price}}</div>
+  
+</div> -->
+
+
+
+<form #stockForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">name stock:</label>
+      <input type="text" class="form-control" id="name" name="name" [(ngModel)]="stock.name" required>
+
+    </div>
+    <div class="form-group">
+      <label for="code">price: </label>
+      <input type="text" class="form-control" id="code" name="code" [(ngModel)]="stock.price" required>
+    </div>
+    <div class="form-group">
+      <label for="price">priceChange: </label>
+      <input type="text" class="form-control" id="price" name="price" [(ngModel)]="stock.priceChange" required>
+    </div>
+
+     Stocks rise/fall :<input type="checkbox" id="check" name="check" [(ngModel)]="stock.check" ><br>
+    
+    <button type="submit" (click)="onSubmit()" class="btn btn-primary" [disabled]="!stockForm.form.valid">Cracte</button>
+  </form>
+</div>
+  
+
